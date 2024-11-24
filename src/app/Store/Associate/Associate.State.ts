@@ -7,6 +7,7 @@ export const AssociateState :AssociateModel = {
         id: "",
         name: "",
         phone: "",
+        associategroup:"level1",
         status: false
     },
 }

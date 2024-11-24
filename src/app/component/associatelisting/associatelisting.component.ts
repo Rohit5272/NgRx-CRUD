@@ -5,8 +5,8 @@ import { MatTableDataSource } from '@angular/material/table';
 import { AddassociateComponent } from '../addassociate/addassociate.component';
 import { Store } from '@ngrx/store';
 import { loadassociate } from 'src/app/Store/Associate/Associate.Action';
-import { getassociate, getassociatelist } from 'src/app/Store/Associate/Associate.Selector';
-import { AssociateModel, Associates } from 'src/app/Store/Model/Associate.model';
+import { getassociatelist } from 'src/app/Store/Associate/Associate.Selector';
+import { Associates } from 'src/app/Store/Model/Associate.model';
 
 @Component({
   selector: 'app-associatelisting',
@@ -17,14 +17,13 @@ export class AssociatelistingComponent {
 
   Associatelist!:Associates[];
   dataSource:any;
-  displayedColumns: string[] = ['id', 'name', 'phone', 'status','action'];
+  displayedColumns: string[] = ['id', 'name', 'phone','associategroup','status','action'];
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
 
   constructor(private _dialog:MatDialog,private _store:Store) {}
 
   ngOnInit() {
-
     this._store.dispatch(loadassociate());
     this._store.select(getassociatelist).subscribe(res => {
       this.Associatelist = res;
@@ -35,21 +34,19 @@ export class AssociatelistingComponent {
     
   }
 
-  openPopup() {
+  edit(id:string) {
+    console.log(id);
+    this.openPopup(id,'Edit Associate')
+  }
+
+  openPopup(id:string,type:string='Add Associate') {
     this._dialog.open(AddassociateComponent, {
-      width: '50%'
+      width: '50%',
+      data: {
+        id:id,
+        type:type
+      }
     })
   }
-}
 
-export interface PeriodicElement {
-  id: number;
-  name: string;
-  phone: number;
-  status: string;
-  action:boolean
 }
-
-const ELEMENT_DATA: PeriodicElement[] = [
-  {id: 1, name: 'Hydrogen', phone: 1.0079, status: 'H',action:true}
-];

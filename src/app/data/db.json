@@ -1,34 +1,46 @@
 {
-    "associate": [
-        {
-            "id": 1,
-            "name": "Ramesh Kumar",
-            "phone": "899089898",
-            "status": true
-        },
-        {
-            "id": 2,
-            "name": "Akbar",
-            "phone": "899089898",
-            "status": true
-        },
-        {
-            "id": 3,
-            "name": "Ramesh Kumar",
-            "phone": "899089898",
-            "status": true
-        },
-        {
-            "id": 4,
-            "name": "Natrajan",
-            "phone": "55566",
-            "status": true
-        },
-        {
-            "id": 5,
-            "name": "sdfasd",
-            "phone": "54545454545",
-            "status": true
-        }
-    ]
+  "associate": [
+    {
+      "id": "1",
+      "name": "Ramesh Kumar",
+      "phone": "899089898",
+      "associategroup": "level1",
+      "status": true
+    },
+    {
+      "id": "2",
+      "name": "Akbar",
+      "phone": "899089898",
+      "associategroup": "level1",
+      "status": true
+    },
+    {
+      "id": "3",
+      "name": "Ramesh Kumar",
+      "phone": "899089898",
+      "associategroup": "level1",
+      "status": true
+    },
+    {
+      "id": "4",
+      "name": "Natrajan",
+      "phone": "55566",
+      "associategroup": "level1",
+      "status": true
+    },
+    {
+      "id": "5",
+      "name": "sdfasd",
+      "phone": "54545454545",
+      "associategroup": "level1",
+      "status": true
+    },
+    {
+      "id": "0719",
+      "name": "Rohit",
+      "phone": "sdsds",
+      "associategroup": "level1",
+      "status": "active"
+    }
+  ]
 }

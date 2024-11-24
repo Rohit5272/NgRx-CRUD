@@ -1,7 +1,7 @@
 <mat-card style="min-height: 500px;" appearance="outlined">
     <mat-card-header>
       <h1>Associate list</h1>
-      <button (click)="openPopup()" mat-raised-button color="primary" style="margin-left: 70%;">Add Associate(+)</button>
+      <button (click)="openPopup('')" mat-raised-button color="primary" style="margin-left: 70%;">Add Associate(+)</button>
     </mat-card-header>
     <mat-card-content>
       <div class="mat-elevation-z8">
@@ -24,6 +24,12 @@
                 <th mat-header-cell *matHeaderCellDef> phone </th>
                 <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
             </ng-container>
+
+            <!-- Group-->>
+            <ng-container matColumnDef="associategroup">
+                <th mat-header-cell *matHeaderCellDef> associategroup </th>
+                <td mat-cell *matCellDef="let element"> {{element.associategroup}} </td>
+            </ng-container>
     
             <!-- Symbol Column -->
             <ng-container matColumnDef="status">
@@ -34,7 +40,7 @@
             <ng-container matColumnDef="action">
                 <th mat-header-cell *matHeaderCellDef>Action</th>
                 <td mat-cell *matCellDef="let element">
-                    <button mat-raised-button color="primary">Edit</button>
+                    <button (click)="edit(element.id)" mat-raised-button color="primary">Edit</button>
                     <button mat-raised-button color="accent">Delete</button>
                 </td>
             </ng-container>

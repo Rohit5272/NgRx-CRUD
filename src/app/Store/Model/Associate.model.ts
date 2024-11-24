@@ -2,6 +2,7 @@ export interface Associates {
     id:string,
     name:string,
     phone:string,
+    associategroup:string,
     status:boolean
 }
 
