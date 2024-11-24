@@ -1,0 +1,34 @@
+{
+    "associate": [
+        {
+            "id": 1,
+            "name": "Ramesh Kumar",
+            "phone": "899089898",
+            "status": true
+        },
+        {
+            "id": 2,
+            "name": "Akbar",
+            "phone": "899089898",
+            "status": true
+        },
+        {
+            "id": 3,
+            "name": "Ramesh Kumar",
+            "phone": "899089898",
+            "status": true
+        },
+        {
+            "id": 4,
+            "name": "Natrajan",
+            "phone": "55566",
+            "status": true
+        },
+        {
+            "id": 5,
+            "name": "sdfasd",
+            "phone": "54545454545",
+            "status": true
+        }
+    ]
+}
